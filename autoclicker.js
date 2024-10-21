@@ -24,8 +24,10 @@
         variableType = "Money";
     } else if (variableExists("Total Burgers")) {
         variableType = "Total Burgers";
+    } else if (variableExists("Cursor Money")) {
+        variableType = "Cursor Money";
     } else {
-        console.log("no thingy found");
+        console.log("No thingy found find the var then request in issues if wanted");
         return;
     }
 
