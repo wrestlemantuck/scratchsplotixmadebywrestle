@@ -28,8 +28,10 @@
         variableType = "cursor money";
     } else if (variableExists("number")) {
         variableType = "number";
-    } else if (variableExists(".energy")) { 
-        variableType = ".Energy"; 
+    } else if (variableExists(".energy")) {
+        variableType = ".Energy";
+    } else if (variableExists("$")) {
+        variableType = "$";
     } else {
         console.log("no thingy found");
         return;
