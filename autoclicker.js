@@ -26,6 +26,8 @@
         variableType = "Total Burgers";
     } else if (variableExists("cursor money")) {
         variableType = "cursor money";
+    } else if (variableExists("cookie (@vino11)")) {
+        variableType = "Cookie (@Vino11)";
     } else if (variableExists("number")) {
         variableType = "number";
     } else if (variableExists(".energy")) {
@@ -63,5 +65,5 @@
         mouseDown = false;
     });
 
-    setInterval(incrementCount, 50);
+    setInterval(incrementCount, 20);
 })();
