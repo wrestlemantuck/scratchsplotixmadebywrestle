@@ -1,5 +1,6 @@
 // This is scratch you can literally take out the blocks. Try bypassing anti cheat in js or even python, good luck with that. - Coolgamemaker3k/guy that is mad i bypassed a ac
 // https://scratch.mit.edu/projects/553420758/#comments-427538056
+// Also works in https://scratch.mit.edu/projects/553699231/
 (() => {
     const maxScoreVariable = "Max amount of score in 3 seconds";
     const newScoreVariable = "New score";
