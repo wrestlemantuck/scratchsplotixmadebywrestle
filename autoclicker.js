@@ -26,6 +26,10 @@
         variableType = "Total Burgers";
     } else if (variableExists("cursor money")) {
         variableType = "cursor money";
+    } else if (variableExists("number")) {
+        variableType = "number";
+    } else if (variableExists(".energy")) { 
+        variableType = ".Energy"; 
     } else {
         console.log("no thingy found");
         return;
