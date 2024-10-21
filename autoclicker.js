@@ -22,8 +22,8 @@
         variableType = "Milk";
     } else if (variableExists("money")) {
         variableType = "Money";
-    } else if (variableExists("burgers")) {
-        variableType = "Burgers";
+    } else if (variableExists("total burgers")) {
+        variableType = "Total Burgers";
     } else if (variableExists("cursor money")) {
         variableType = "cursor money";
     } else if (variableExists("cookie (@vino11)")) {
@@ -36,6 +36,8 @@
         variableType = "$";
     } else if (variableExists("score")) {
         variableType = "Score";
+    } else if (variableExists("candy")) {
+        variableType = "Candy";
     } else {
         console.log("no thingy found");
         return;
