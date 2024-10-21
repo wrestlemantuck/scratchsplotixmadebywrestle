@@ -4,7 +4,7 @@
     const maxScoreVariable = "Max amount of score in 3 seconds";
     const newScoreVariable = "New score";
     const oldScoreVariable = "Old score";
-    const scoreVariable = "score";
+    const scoreVariable = "Score";
 
     setInterval(() => {
         setglobal(maxScoreVariable, 1000000000);
