@@ -34,6 +34,8 @@
         variableType = ".Energy";
     } else if (variableExists("$")) {
         variableType = "$";
+    } else if (variableExists("score")) {
+        variableType = "Score";
     } else {
         console.log("no thingy found");
         return;
