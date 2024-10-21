@@ -1,0 +1,25 @@
+// https://scratch.mit.edu/projects/818221808/ and some projects that use acb DONT GO TOO HIGH
+(() => {
+    let fPressed = false;
+    let enabled = false;
+
+    window.addEventListener("keydown", (event) => {
+        if (event.code === "KeyF") {
+            enabled = !enabled;
+            fPressed = !enabled;
+        }
+
+        if (event.code === "ArrowUp" && enabled) {
+            const intervalId = setInterval(() => {
+                const randomValue = Math.random() * (5 - 4.9) + 4.9;
+                setglobal("MotionY", randomValue);
+            }, 100);
+
+            window.addEventListener("keyup", (upEvent) => {
+                if (upEvent.code === "ArrowUp") {
+                    clearInterval(intervalId);
+                }
+            });
+        }
+    });
+})();
