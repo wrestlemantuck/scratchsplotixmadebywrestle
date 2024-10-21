@@ -1,13 +1,6 @@
 (() => {
-    const targetUrl = "https://scratch.mit.edu/projects/452800849/";
-    if (window.location.href === targetUrl) {
-        console.log("Not Supported due to detection");
-        return;
-    }
-
     let count = 0;
     let mouseDown = false;
-    let active = false; 
     let variableType = null;
 
     const globals = getglobals();
@@ -32,12 +25,12 @@
     } else if (variableExists("Total Burgers")) {
         variableType = "Total Burgers";
     } else {
-        console.log("Please request a var name in issues.");
+        console.log("no thingy found");
         return;
     }
 
     const incrementCount = () => {
-        if (active && mouseDown) {
+        if (mouseDown) {
             count += 2;
             setglobal(variableType, count);
             console.log(`${variableType}: ${count}`);
@@ -53,13 +46,6 @@
         };
         requestAnimationFrame(checkAnticheatVisibility);
     }
-
-    window.addEventListener("keydown", (event) => {
-        if (event.code === "KeyA") {
-            active = !active; 
-            console.log(`Toggled: ${active}`);
-        }
-    });
 
     window.addEventListener("mousedown", () => {
         mouseDown = true;
