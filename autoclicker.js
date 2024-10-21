@@ -1,68 +1,75 @@
 // WORKS WITH MOST CLICKERS,REQUEST IN ISSUES IF WANTED
 (() => {
-    let count = 0;
-    let mouseDown = false;
-    let active = false; 
-    let variableType = null;
+    const targetUrl = "https://scratch.mit.edu/projects/452800849/";
 
-    const globals = getglobals();
-    const variableExists = (name) => globals.some(globalName => globalName.toLowerCase() === name.toLowerCase());
-
-    if (variableExists("Cookies")) {
-        variableType = "Cookies";
-    } else if (variableExists("Coins")) {
-        variableType = "Coins";
-    } else if (variableExists("Points")) {
-        variableType = "Points";
-    } else if (variableExists("Donuts")) {
-        variableType = "Donuts";
-    } else if (variableExists("Clicks")) {
-        variableType = "Clicks";
-    } else if (variableExists("Hot Dogs")) {
-        variableType = "Hot Dogs";
-    } else if (variableExists("Milk")) {
-        variableType = "Milk";
-    } else if (variableExists("Money")) {
-        variableType = "Money";
-    } else if (variableExists("Total Burgers")) {
-        variableType = "Total Burgers";
-    } else {
-        console.log("novarfound bro");
+    if (window.location.href === targetUrl) {
+        console.log("Script not supported on this project.");
         return;
-    }
+    } else {
+        let count = 0;
+        let mouseDown = false;
+        let active = false; 
+        let variableType = null;
 
-    const incrementCount = () => {
-        if (active && mouseDown) {
-            count += 2;
-            setglobal(variableType, count);
-            console.log(`${variableType}: ${count}`);
+        const globals = getglobals();
+        const variableExists = (name) => globals.some(globalName => globalName.toLowerCase() === name.toLowerCase());
+
+        if (variableExists("Cookies")) {
+            variableType = "Cookies";
+        } else if (variableExists("Coins")) {
+            variableType = "Coins";
+        } else if (variableExists("Points")) {
+            variableType = "Points";
+        } else if (variableExists("Donuts")) {
+            variableType = "Donuts";
+        } else if (variableExists("Clicks")) {
+            variableType = "Clicks";
+        } else if (variableExists("Hot Dogs")) {
+            variableType = "Hot Dogs";
+        } else if (variableExists("Milk")) {
+            variableType = "Milk";
+        } else if (variableExists("Money")) {
+            variableType = "Money";
+        } else if (variableExists("Total Burgers")) {
+            variableType = "Total Burgers";
+        } else {
+            console.log("No variable found.");
+            return;
         }
-    };
 
-    const anticheatSprite = getsprite("Anticheat");
-    if (anticheatSprite) {
-        anticheatSprite.visible = false;
-        const checkAnticheatVisibility = () => {
-            anticheatSprite.visible = false;
-            requestAnimationFrame(checkAnticheatVisibility);
+        const incrementCount = () => {
+            if (active && mouseDown) {
+                count += 2;
+                setglobal(variableType, count);
+                console.log(`${variableType}: ${count}`);
+            }
         };
-        requestAnimationFrame(checkAnticheatVisibility);
-    }
 
-    window.addEventListener("keydown", (event) => {
-        if (event.code === "KeyA") {
-            active = !active; 
-            console.log(`Toggled: ${active}`);
+        const anticheatSprite = getsprite("Anticheat");
+        if (anticheatSprite) {
+            anticheatSprite.visible = false;
+            const checkAnticheatVisibility = () => {
+                anticheatSprite.visible = false;
+                requestAnimationFrame(checkAnticheatVisibility);
+            };
+            requestAnimationFrame(checkAnticheatVisibility);
         }
-    });
 
-    window.addEventListener("mousedown", () => {
-        mouseDown = true;
-    });
+        window.addEventListener("keydown", (event) => {
+            if (event.code === "KeyA") {
+                active = !active; 
+                console.log(`Toggled: ${active}`);
+            }
+        });
 
-    window.addEventListener("mouseup", () => {
-        mouseDown = false;
-    });
+        window.addEventListener("mousedown", () => {
+            mouseDown = true;
+        });
 
-    setInterval(incrementCount, 50);
+        window.addEventListener("mouseup", () => {
+            mouseDown = false;
+        });
+
+        setInterval(incrementCount, 50);
+    }
 })();
