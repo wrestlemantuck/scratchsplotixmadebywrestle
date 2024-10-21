@@ -1,0 +1,45 @@
+// https://scratch.mit.edu/projects/1083158244/ yes i know its my own ac but why not put the bypass here
+(() => {
+    const sprite = getsprite("LGACMain");
+    
+    if (!sprite) {
+        console.error("LGACMain sprite not found!");
+        return;
+    }
+
+    let keysPressed = {};
+    const speed = 3;
+
+    window.addEventListener("keydown", (event) => {
+        keysPressed[event.key] = true;
+    });
+
+    window.addEventListener("keyup", (event) => {
+        keysPressed[event.key] = false;
+    });
+
+    function moveSprite() {
+        const position = {
+            x: sprite.x || 0,
+            y: sprite.y || 0
+        };
+
+        if (keysPressed["w"]) {
+            position.y += speed;
+        }
+        if (keysPressed["s"]) {
+            position.y -= speed;
+        }
+        if (keysPressed["a"]) {
+            position.x -= speed;
+        }
+        if (keysPressed["d"]) {
+            position.x += speed;
+        }
+
+        sprite.x = position.x;
+        sprite.y = position.y;
+    }
+
+    setInterval(moveSprite, 20);
+})();
