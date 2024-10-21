@@ -6,28 +6,28 @@
     const globals = getglobals();
     const variableExists = (name) => globals.some(globalName => globalName.toLowerCase() === name.toLowerCase());
 
-    if (variableExists("Cookies")) {
+    if (variableExists("cookies")) {
         variableType = "Cookies";
-    } else if (variableExists("Coins")) {
+    } else if (variableExists("coins")) {
         variableType = "Coins";
-    } else if (variableExists("Points")) {
+    } else if (variableExists("points")) {
         variableType = "Points";
-    } else if (variableExists("Donuts")) {
+    } else if (variableExists("donuts")) {
         variableType = "Donuts";
-    } else if (variableExists("Clicks")) {
+    } else if (variableExists("clicks")) {
         variableType = "Clicks";
-    } else if (variableExists("Hot Dogs")) {
+    } else if (variableExists("hot dogs")) {
         variableType = "Hot Dogs";
-    } else if (variableExists("Milk")) {
+    } else if (variableExists("milk")) {
         variableType = "Milk";
-    } else if (variableExists("Money")) {
+    } else if (variableExists("money")) {
         variableType = "Money";
-    } else if (variableExists("Total Burgers")) {
+    } else if (variableExists("total burgers")) {
         variableType = "Total Burgers";
-    } else if (variableExists("Cursor Money")) {
-        variableType = "Cursor Money";
+    } else if (variableExists("cursor money")) {
+        variableType = "cursor money";
     } else {
-        console.log("No thingy found find the var then request in issues if wanted");
+        console.log("no thingy found");
         return;
     }
 
