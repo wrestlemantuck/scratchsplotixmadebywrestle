@@ -1,3 +1,4 @@
+// SOME PROJECTS YOU HAVE TO BUY SOMETHING TO DISPLAY UR MONEY
 (() => {
     let count = 0;
     let mouseDown = false;
