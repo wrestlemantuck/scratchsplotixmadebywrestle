@@ -1,0 +1,4 @@
+// SOME PROJECTS THIS WORKS ON: https://scratch.mit.edu/projects/568479962/
+(() => {
+    broadcast("admin");
+})();
