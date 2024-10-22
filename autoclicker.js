@@ -7,7 +7,9 @@
     const globals = getglobals();
     const variableExists = (name) => globals.some(globalName => globalName.toLowerCase() === name.toLowerCase());
 
-    if (variableExists("cookies")) {
+    if (variableExists("IlIlIIlIllIIIIIlIlIllIIlIlllIIllIlIIlIlllllIIlIlIlIIllllIIllllIIIIlllIllIlIlIlllllIlIIIlIlIIlIllIlIIllIllllIllIIIll")) { // for https://scratch.mit.edu/projects/1005163310/ cus its obfed
+        variableType = "IlIlIIlIllIIIIIlIlIllIIlIlllIIllIlIIlIlllllIIlIlIlIIllllIIllllIIIIlllIllIlIlIlllllIlIIIlIlIIlIllIlIIllIllllIllIIIll";
+    } else if (variableExists("cookies")) {
         variableType = "Cookies";
     } else if (variableExists("coins")) {
         variableType = "Coins";
@@ -48,7 +50,7 @@
 
     const incrementCount = () => {
         if (mouseDown) {
-            count += 100; // EDIT THIS TO GET MORE WHENEVER MOUSE DOWN
+            count += 100;
             setglobal(variableType, count);
             console.log(`${variableType}: ${count}`);
         }
