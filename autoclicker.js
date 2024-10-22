@@ -1,4 +1,4 @@
-// SOME PROJECTS YOU HAVE TO BUY SOMETHING TO DISPLAY UR MONEY
+// SOME PROJECTS YOU HAVE TO UPGRADE SOMETHING FOR THE DISPLAY TO UPDATE
 (() => {
     let count = 0;
     let mouseDown = false;
@@ -26,11 +26,11 @@
     } else if (variableExists("total burgers")) {
         variableType = "Total Burgers";
     } else if (variableExists("cursor money")) {
-        variableType = "cursor money";
+        variableType = "Cursor Money";
     } else if (variableExists("cookie (@vino11)")) {
         variableType = "Cookie (@Vino11)";
     } else if (variableExists("number")) {
-        variableType = "number";
+        variableType = "Number";
     } else if (variableExists(".energy")) {
         variableType = ".Energy";
     } else if (variableExists("$")) {
@@ -39,6 +39,8 @@
         variableType = "Score";
     } else if (variableExists("candy")) {
         variableType = "Candy";
+    } else if (variableExists("___robux")) {
+        variableType = "Robux";
     } else {
         console.log("no thingy found");
         return;
@@ -46,7 +48,7 @@
 
     const incrementCount = () => {
         if (mouseDown) {
-            count += 100; //  EDIT THIS TO GET MORE WHENEVER MOUSE DOWN
+            count += 100; // EDIT THIS TO GET MORE WHENEVER MOUSE DOWN
             setglobal(variableType, count);
             console.log(`${variableType}: ${count}`);
         }
