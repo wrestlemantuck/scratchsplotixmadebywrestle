@@ -39,7 +39,7 @@
         variableType = "Score";
     } else if (variableExists("candy")) {
         variableType = "Candy";
-    } else if (variableExists("___robux")) {
+    } else if (variableExists("UI.Robux")) {
         variableType = "Robux";
     } else {
         console.log("no thingy found");
