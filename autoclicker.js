@@ -7,8 +7,10 @@
     const globals = getglobals();
     const variableExists = (name) => globals.some(globalName => globalName.toLowerCase() === name.toLowerCase());
 
-    if (variableExists("IlIlIIlIllIIIIIlIlIllIIlIlllIIllIlIIlIlllllIIlIlIlIIllllIIllllIIIIlllIllIlIlIlllllIlIIIlIlIIlIllIlIIllIllllIllIIIll")) { // for https://scratch.mit.edu/projects/1005163310/ cus its obfed
+    if (variableExists("IlIlIIlIllIIIIIlIlIllIIlIlllIIllIlIIlIlllllIIlIlIlIIllllIIllllIIIIlllIllIlIlIlllllIlIIIlIlIIlIllIlIIllIllllIllIIIll")) {
         variableType = "IlIlIIlIllIIIIIlIlIllIIlIlllIIllIlIIlIlllllIIlIlIlIIllllIIllllIIIIlllIllIlIlIlllllIlIIIlIlIIlIllIlIIllIllllIllIIIll";
+    } else if (variableExists("jam")) {
+        variableType = "Jam";
     } else if (variableExists("cookies")) {
         variableType = "Cookies";
     } else if (variableExists("coins")) {
