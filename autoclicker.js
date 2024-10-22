@@ -46,7 +46,7 @@
 
     const incrementCount = () => {
         if (mouseDown) {
-            count += 100;
+            count += 100; //  EDIT THIS TO GET MORE WHENEVER MOUSE DOWN
             setglobal(variableType, count);
             console.log(`${variableType}: ${count}`);
         }
