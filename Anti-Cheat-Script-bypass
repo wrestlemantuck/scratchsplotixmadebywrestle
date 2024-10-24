@@ -13,9 +13,9 @@
 
     window.addEventListener("keydown", (event) => {
         if (event.code === "Space") {
-            setglobal(newScoreVariable, (getglobal(newScoreVariable) || 0) + 1);
-            setglobal(oldScoreVariable, (getglobal(oldScoreVariable) || 0) + 1);
-            setglobal(scoreVariable, (getglobal(scoreVariable) || 0) + 1);
+            setglobal(newScoreVariable, (getglobal(newScoreVariable) || 0) + 12);
+            setglobal(oldScoreVariable, (getglobal(oldScoreVariable) || 0) + 12);
+            setglobal(scoreVariable, (getglobal(scoreVariable) || 0) + 12);
         }
     });
 })();
