@@ -1,4 +1,5 @@
 // https://scratch.mit.edu/projects/1083158244/ yes i know its my own ac but why not put the bypass here MADEBYWRESTLE
+// PATCHEDBYWRESTLE
 (() => {
     const sprite = getsprite("LGACMain");
     
