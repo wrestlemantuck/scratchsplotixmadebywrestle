@@ -8,7 +8,7 @@ We reserve the right to change or modify these terms at any time. Changes will b
 
 3. Use of Mods
 
-Users may create, distribute, and use mods for the designated VR games.
+Users may create, distribute, and use mods for the designated Scratch games.
 All mods must comply with the game’s End User License Agreement (EULA) and any other applicable agreements.
 Users are solely responsible for any consequences arising from their use of mods.
 4. Intellectual Property Rights
