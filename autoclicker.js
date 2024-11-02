@@ -45,6 +45,8 @@
         variableType = "Candy";
     } else if (variableExists("UI.Robux")) {
         variableType = "Robux";
+    } else if (variableExists("cloud")) {
+        variableType = "cloud";
     } else {
         console.log("no thingy found");
         return;
